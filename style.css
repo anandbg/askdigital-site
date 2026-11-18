@@ -1,0 +1,30 @@
+:root{--bg:#fff;--fg:hsl(0 0% 6%);--mute:hsl(0 0% 38%);--line:hsl(0 0% 88%);--soft:hsl(0 0% 96%);--accent:rgb(214,31,38)}
+@media (prefers-color-scheme:dark){:root{--bg:hsl(0 0% 7%);--fg:hsl(0 0% 95%);--mute:hsl(0 0% 66%);--line:hsl(0 0% 20%);--soft:hsl(0 0% 11%);--accent:rgb(240,70,76)}}
+*{box-sizing:border-box}
+html{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;overflow-x:clip}
+a{color:inherit}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px}
+.brand{font-weight:700;text-decoration:none;letter-spacing:.01em}
+nav{display:flex;flex-wrap:wrap;gap:6px 22px}
+nav a{text-decoration:none;color:var(--mute);white-space:nowrap}
+nav a:hover,nav a[aria-current]{color:var(--fg)}
+nav a[aria-current]{border-bottom:2px solid var(--accent)}
+h1{font-size:clamp(2rem,6vw,3.1rem);line-height:1.12;margin:56px 0 18px;overflow-wrap:anywhere}
+h2{font-size:1.45rem;margin:48px 0 12px}
+p{margin:0 0 16px}
+.lede{font-size:1.2rem;color:var(--mute);max-width:640px}
+.tag{color:var(--accent);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px;margin:24px 0}
+.card{border:1px solid var(--line);background:var(--soft);padding:20px;border-radius:6px}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.card p{margin:0;color:var(--mute);font-size:.97rem}
+.btn{display:inline-block;background:var(--fg);color:var(--bg);padding:12px 22px;border-radius:4px;text-decoration:none;margin-top:8px}
+.btn:hover{background:var(--accent);color:#fff}
+ol.steps{padding-left:22px}
+ol.steps li{margin-bottom:10px}
+footer{border-top:1px solid var(--line);margin-top:72px;padding:28px 0 40px;color:var(--mute);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
+.status{color:var(--mute);font-size:.9rem}
